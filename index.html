@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http.equiv="X-UA-Compatible" content="IE=edge"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="header">
+    <div class="container">
+        <div class="logo">
+            <h1 class="name">Srinithi</h1>
+        </div>
+        <nav>
+            <ul id="sidemenu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#personalinterests">Personal interests</a></li>
+                <li><a href="#lifeatpsiog">Life at Psiog</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <i class="icon" onclick="closemenu()"></i>
+            </ul> 
+            <i class="menu icon" onclick="openmenu()"></i>
+
+        </nav>
+        <div class="header-text">
+            <p>Graduate Trainee</p>
+            <h1>Hi there, I'm <span> Srinithi</span></h1> 
+        </div>
+    </div>
+</div>
+
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="profile.jpg" class="profile" height="300px"> </div>
+            <div class="about-col-1">
+                <h1 class="sub-title">About Me</h1>
+                <p>Hi, I’m Srinithi Mohan, a passionate and dedicated Graduate Engineer Trainee with a strong background. I thrive on solving complex problems and constantly seek new opportunities to grow both personally and professionally.</p>
+                <br>
+<br>
+                
+                <div class="tab-titles">
+                    <p class="tab-links" id="skills-tab" onmouseover="opentab('skills')">Skills</p>
+                    <p class="tab-links" id="experience-tab" onmouseover="opentab('experience')">Experience</p>
+                    <p class="tab-links" id="education-tab" onmouseover="opentab('education')">Education</p>
+                </div>
+
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>SQL</span><br></li>
+                        <li><span>C#</span><br></li>
+                        <li><span>NPTEL</span><br>Soft Skills</li>
+
+                    </ul>
+                </div>
+                <div class="tab-contents" id="experience">
+                    <ul>
+                        <li><span>2024 - Present</span><br>Graduate Trainee at Psiog Digital</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>2018</span><br>High School at Nazareth Convent</li>
+                        <li><span>2020</span><br>Higher Secondary at Vidyaa Vikas International School</li>
+                        <li><span>2024</span><br>BE - ECE at Sri Krishna College of Engineering and Technology</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div id="personalinterests">
+    <div class="container">
+        <h1 class="sub-title">Personal interests</h1>
+        <div class="personalinterests-list">
+            <div>
+                <h2>Sports</h2>
+                <p> Badminton </p>
+                <a href="#">Learn more</a>
+            </div>
+            <div>
+                <h2>Dance</h2>
+                <p>Classical Dancer</p>
+                <a href="#">Learn more</a>
+            </div>
+            <div>
+                <h2>Baking</h2>
+                <p>Pasteries</p>
+                <a href="#">Learn more</a>
+            </div>
+        </div>
+    <div>
+</div>
+        
+
+
+<div id="lifeatpsiog">
+    <div class="container">
+        <h1 class="sub-title">Life at Psiog</h1>
+        <div class="psiog-list">
+            <div class="psiog">
+                <img src="10years.jpg">
+                <div class="layer">
+                    <h3>10 Years</h3>
+                    <p> Celebrating 10 Years of Psiog Digital</p>
+                </div>
+            </div>
+            <div class="psiog">
+                <img src="Media.jpg">
+                <div class="layer">
+                    <h3> Impact Program </h3>
+                    <p> Impacters batch 2024</p>
+                </div>
+            </div>
+            <div class="psiog">
+                <img src="Image (2).jpg">
+                <div class="layer">
+                    <h3> Psiog </h3>
+                    <p> Psiog </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><i class="fa-brands fa-paper-plane"></i>contact@example.com</p>
+                <p><i class="fa-brands fa-phone-square-alt"> </i>0123456678</p>
+                <div class="social-icons">
+                    <a href="https://linkedin.com/"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://twitter.com"><i class="fa-brands fa-twitter"></i></a>
+
+                </div>
+                <a href="" class "btn btn2">Download CV</a>
+            </div>
+            <div class="contact-right">
+                <form>
+                    <input type="text" name="Name" placeholder="Srinithi" required>
+                    <input type="email" name="email" placeholder="sriniithi23@gmail.com" required>
+                    <input type="message" rows="6" placeholder="xyz"></textarea>
+                    <button type="submit" class="btn btn2">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+    function opentab(tabname) {
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+
+</script>
+
+<script>
+    var sidemenu = document.getElementById("sidemenu");
+
+    function openmenu(){
+        sidemenu.style.right = "0";
+    }
+    function closemenu(){
+        sidemenu.style.right = "-200px";
+    }
+
+</script>
+
+<div id="theme-toggle">
+    <button onclick="toggleTheme()">Toggle Dark Mode</button>
+</div>
+<div id="theme-toggle">
+    <i id="theme-icon" class="fas fa-moon" onclick="toggleTheme()"></i>
+</div>
+
+
+</div>
+</body>
+    
